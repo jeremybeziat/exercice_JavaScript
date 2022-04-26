@@ -1,6 +1,11 @@
+//exercice1
+//Calcul de l'aire d'un cercle
 export function calculateCircumference(radius) {
-    return 2 * Math.PI * radius;
+    return 2 * Math.PI * radius; //Math.PI = 3.14
   }
+
+//exercice2
+//Pour trouver si le 1 janvier est un dimanche entre 2014 et 2050
 
   export function firstSunday () {
     for (var year = 2014; year <= 2050; year++) {
@@ -13,4 +18,23 @@ export function calculateCircumference(radius) {
   
   firstSunday();
 
+//exercice 3
+//Trouver les n premiers termes de Fibonnacci
 
+function fibonacci(nbr) {
+  var n1 = 0;
+  var n2 = 1;
+  var somme = 0;
+
+  for (let i = 2; i <= nbr; i++) {
+    //somme des deux derniers nombres
+    somme = n1 + n2;
+    //assigner la dernière valeur à la première
+    n1 = n2;
+    //attribuer la somme au dernier
+    n2 = somme;
+  }
+
+  return nbr ? n2 : n1;
+}
+console.log(fibonacci(8));
